@@ -10,13 +10,13 @@ const App = () => {
 
   return (
     <>
-      <div className="h-screen w-full flex flex-col items-center justify-between bg-light-gray-cyan">
-        <div className="h-32 flex items-center font-bold text-v-dark-cyan text-2xl tracking-space">
+      <div className="h-screen w-full flex flex-col items-center justify-between md:justify-around bg-light-gray-cyan">
+        <div className="h-32 md:h-2 flex items-center font-bold text-v-dark-cyan text-2xl tracking-space">
           <h5>
             SPLI<br></br>TTER
           </h5>
         </div>
-        <div className="h-full bg-white rounded-tl-3xl rounded-tr-3xl p-6">
+        <div className="h-full bg-white rounded-tl-3xl rounded-tr-3xl md:rounded-3xl p-6 md:flex md:gap-10 md:h-96">
           <div className="">
             <BillAmount />
             <TipPer />
