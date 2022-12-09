@@ -12,7 +12,7 @@ const BillAmount = () => {
         </label>
         <input
           type="text"
-          inputMode='numeric'
+          inputMode="numeric"
           name="amount"
           id="bill"
           className="bg-very-light-cyan h-10 rounded-md outline-dark-gray-cyan cursor-pointer mb-5 text-right p-2"

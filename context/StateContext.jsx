@@ -3,8 +3,7 @@ import { createContext, useState } from 'react';
 const StateContext = createContext();
 
 export function ContextProvider({ children }) {
-  // const [totalTipPers, setTotalTipPers] = useState(0);
-  // const [totalPerPers, setTotalPerPers] = useState();
+
   let percentage;
   let tipPerPers;
   let totalBillAmountPerPers;
@@ -37,15 +36,16 @@ export function ContextProvider({ children }) {
   const calculate = () => {
     const billAmount = document.getElementById('bill').value;
     const numberOfPeople = document.getElementById('nrOfPeople').value;
+    const resultPerPers = document.getElementById('amountPerPers');
+    const totalResPerPers = document.getElementById('totalAmountPerPers');
 
     const split = billAmount / numberOfPeople;
     tipPerPers = split * percentage;
     totalBillAmountPerPers = split + tipPerPers;
 
-    console.log(tipPerPers);
-    console.log(totalBillAmountPerPers);
+    resultPerPers.innerHTML = '$' + tipPerPers;
+    totalResPerPers.innerHTML = '$' + totalBillAmountPerPers;
 
-    // console.log(totalPerPers)
   };
 
   return (
@@ -57,8 +57,6 @@ export function ContextProvider({ children }) {
         getPercentage15,
         getPercentage25,
         getPercentage50,
-        tipPerPers,
-        totalBillAmountPerPers,
       }}
     >
       {children}

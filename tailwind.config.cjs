@@ -1,16 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontWeight: {
       regular: 400,
       bold: 700,
     },
     letterSpacing: {
-      space: '1rem'
+      space: '1rem',
     },
     extend: {
       colors: {
@@ -20,9 +17,9 @@ module.exports = {
         'gray-cyan': 'hsl(184, 14%, 56%)',
         'light-gray-cyan': 'hsl(185, 41%, 84%)',
         'very-light-cyan': 'hsl(189, 41%, 97%)',
-        'white': 'hsl(0, 0%, 100%)',
+        white: 'hsl(0, 0%, 100%)',
       },
     },
   },
   plugins: [],
-}
+};
